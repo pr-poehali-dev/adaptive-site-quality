@@ -1,0 +1,329 @@
+/* Главный файл адаптивности сайта цветочного магазина */
+
+/* Общие медиа-запросы для всего сайта */
+
+/* Большие настольные экраны (большие десктопы, 1200px и выше) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .navbar-brand img {
+    height: 150px;
+  }
+  
+  .navbar-nav {
+    font-size: 30px;
+  }
+  
+  .slider {
+    height: 700px;
+  }
+  
+  .text1, .text2 {
+    font-size: 30px;
+  }
+}
+
+/* Средние экраны (настольные компьютеры, 992px и выше) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .navbar-brand img {
+    height: 120px;
+  }
+  
+  .navbar-nav {
+    font-size: 26px;
+    margin-left: 15%;
+  }
+  
+  .slider {
+    height: 600px;
+  }
+  
+  .text1, .text2 {
+    font-size: 26px;
+    line-height: 1.8;
+  }
+  
+  .card-content h2 {
+    font-size: 22px;
+  }
+}
+
+/* Маленькие экраны (планшеты, 768px и выше) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .navbar-brand img {
+    height: 100px;
+  }
+  
+  .navbar-nav {
+    font-size: 22px;
+    margin-left: 5%;
+  }
+  
+  .slider {
+    height: 500px;
+  }
+  
+  .text1, .text2 {
+    font-size: 22px;
+    line-height: 1.6;
+    width: 80%;
+    margin-right: 0;
+  }
+  
+  .card-content h2 {
+    font-size: 20px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 350px;
+  }
+  
+  .assortment-container {
+    justify-content: space-around;
+  }
+  
+  .custom-card {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Очень маленькие экраны (телефоны в ландшафтном режиме, 576px и выше) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .navbar-brand img {
+    height: 90px;
+  }
+  
+  .navbar-nav {
+    font-size: 18px;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .slider {
+    height: 400px;
+  }
+  
+  .text1, .text2 {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  h2.text-center, .asorti {
+    font-size: 26px;
+  }
+  
+  .card-content h2 {
+    font-size: 18px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .col-md-3, .col-md-4, .col-md-6, .col-md-8 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .assortment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .custom-card {
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+  
+  .adress, .phone {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .social {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+/* Экстра маленькие экраны (телефоны, менее 576px) */
+@media (max-width: 575.98px) {
+  .navbar-brand img {
+    height: 70px;
+  }
+  
+  .navbar-nav {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .slider {
+    height: 250px;
+  }
+  
+  .text1, .text2 {
+    font-size: 16px;
+    line-height: 1.4;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  h2.text-center, .asorti {
+    font-size: 22px;
+  }
+  
+  .card-content h2 {
+    font-size: 16px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .custom-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .adress, .phone {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .social img {
+    width: 30px;
+  }
+  
+  .copy {
+    font-size: 12px;
+  }
+  
+  /* Специальные корректировки для очень маленьких экранов */
+  .row.align-items-center {
+    flex-direction: column;
+  }
+  
+  .col-md-3 img,
+  .col-md-4 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .row .col-md-3 {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Специфичные исправления для изображений */
+@media (max-width: 767.98px) {
+  .rounded.float-start,
+  .col-md-4 img,
+  .col-md-3 img {
+    float: none !important;
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Исправления для отзывов */
+@media (max-width: 991.98px) {
+  .col-md-4 img[src*="КОМ1.png"] {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Специальные корректировки для футера */
+@media (max-width: 767.98px) {
+  .c1 .row .col-md-6 {
+    text-align: center;
+  }
+  
+  .c1 .row .col-md-6 img {
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  .c1 .navbar-nav {
+    display: none; /* Скрываем дублирующее меню в футере на мобильных */
+  }
+  
+  h2.text-end {
+    text-align: center !important;
+  }
+}
+
+/* Плавная прокрутка для всех устройств */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Улучшение сенсорного взаимодействия для мобильных устройств */
+@media (max-width: 991.98px) {
+  a, button, .custom-card {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  
+  .custom-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .navbar-toggler {
+    padding: 10px;
+  }
+  
+  .navbar-toggler-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Улучшения для карточек товаров на мобильных устройствах */
+@media (max-width: 767.98px) {
+  .assortment-container {
+    gap: 15px;
+  }
+  
+  .custom-card {
+    transition: transform 0.2s ease;
+  }
+  
+  .custom-card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Исправления для изображений слайдера на мобильных устройствах */
+@media (max-width: 767.98px) {
+  .slide img {
+    object-position: center;
+  }
+}

@@ -1,0 +1,378 @@
+/* Основные стили и переменные */
+:root {
+  --primary-pink: #D08FA7;
+  --primary-purple: #7b44d4;
+  --light-purple: #916acf;
+  --dark-purple: #66063e;
+  --deep-purple: #4b0666;
+  --white: #ffffff;
+  --light-bg: #fffcfd;
+  --font-chalkboard: "Chalkboard SE", cursive;
+  --font-nexa: "Nexa Script Thin", sans-serif;
+}
+
+/* Глобальные стили */
+body {
+  background-color: var(--light-bg);
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Стили для навбара */
+.navbar {
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 150px;
+  transition: height 0.3s ease;
+}
+
+.navbar-nav {
+  font-size: 30px;
+  margin-left: 30%;
+}
+
+.nav-link {
+  color: var(--primary-pink) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-purple) !important;
+  transform: scale(1.05);
+}
+
+/* Стили для слайдера */
+.slider {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Заголовки и текст */
+h2.text-center {
+  font-family: var(--font-chalkboard);
+  color: var(--primary-pink);
+  margin: 40px 0;
+}
+
+.asorti {
+  font-family: var(--font-nexa);
+  text-align: center;
+  color: var(--primary-pink);
+  margin: 40px 0;
+}
+
+.text1, .text2 {
+  width: 100%;
+  font-size: 30px;
+  line-height: 2;
+  margin: 20px 0;
+}
+
+.text1 {
+  color: var(--primary-purple);
+}
+
+.text2 {
+  color: var(--light-purple);
+}
+
+/* Карточки ассортимента */
+.assortment-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.custom-card {
+  width: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.card-content h2 {
+  margin: 5px 0;
+  font-size: 24px;
+  color: var(--dark-purple);
+}
+
+/* Секция отзывов */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-3, .col-md-4, .col-md-6, .col-md-8 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Футер */
+.c1 {
+  background-color: var(--white);
+  padding: 40px 0 20px;
+  margin-top: 40px;
+}
+
+.adress {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--deep-purple);
+}
+
+.phone {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-purple);
+  margin-bottom: 20px;
+}
+
+.social img {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+.copy {
+  color: var(--light-purple);
+  font-size: 14px;
+  padding: 15px 0;
+  margin: 0;
+}
+
+hr {
+  border-color: var(--primary-pink);
+  opacity: 0.3;
+  margin: 30px 0 15px;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 1200px) {
+  .navbar-nav {
+    margin-left: 15%;
+    font-size: 24px;
+  }
+  
+  .navbar-brand img {
+    height: 120px;
+  }
+  
+  .text1, .text2 {
+    font-size: 24px;
+    line-height: 1.8;
+  }
+  
+  .slider {
+    height: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-brand img {
+    height: 100px;
+  }
+  
+  .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .slider {
+    height: 500px;
+  }
+  
+  .text1, .text2 {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  .col-md-6, .col-md-4, .col-md-8 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px;
+  }
+  
+  .navbar-nav {
+    font-size: 20px;
+  }
+  
+  .slider {
+    height: 400px;
+  }
+  
+  h2.text-center, .asorti {
+    font-size: 24px;
+  }
+  
+  .text1, .text2 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .custom-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .card-content h2 {
+    font-size: 20px;
+  }
+  
+  .col-md-3 {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  
+  iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 70px;
+  }
+  
+  .slider {
+    height: 300px;
+  }
+  
+  .text1, .text2 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .assortment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .col-md-3 {
+    width: 100%;
+  }
+  
+  .social img {
+    width: 30px;
+  }
+  
+  iframe {
+    height: 250px;
+  }
+  
+  .adress, .phone {
+    text-align: center;
+  }
+  
+  .copy {
+    font-size: 12px;
+  }
+}
+
+/* Вспомогательные классы и стили для улучшения доступности */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-start {
+  text-align: left;
+}
+
+.text-end {
+  text-align: right;
+}
+
+/* Анимации и дополнительные эффекты */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+/* Улучшенные отступы между секциями */
+section {
+  margin: 50px 0;
+}
+
+/* Улучшение визуального разделения контента */
+.section-divider {
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary-pink), transparent);
+  margin: 40px auto;
+}
+
+/* Дополнительные улучшения для интерактивности кнопок */
+button, a {
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+  opacity: 0.85;
+}
